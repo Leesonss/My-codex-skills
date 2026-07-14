@@ -1,0 +1,4 @@
+interface:
+  display_name: "Citation Claim Auditor"
+  short_description: "Audit citation-to-claim fit in academic writing"
+  default_prompt: "Use $citation-claim-auditor to run a Standard audit of the provided academic text."
