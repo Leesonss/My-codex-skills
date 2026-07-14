@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evidence Synthesis"
+  short_description: "Turn Literature RAG results into traceable evidence syntheses."
+  default_prompt: "Use $evidence-synthesis to synthesize a focused research question with traceable evidence from literature_rag."

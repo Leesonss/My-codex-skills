@@ -1,0 +1,6 @@
+/*
+!/.gitignore
+!/gap-contribution-auditor/
+!/gap-contribution-auditor/**
+!/evidence-synthesis/
+!/evidence-synthesis/**

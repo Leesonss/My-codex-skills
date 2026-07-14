@@ -1,0 +1,9 @@
+interface:
+  display_name: "Gap & Contribution Auditor"
+  short_description: "Audit research gaps and theoretical contributions"
+  default_prompt: "Use $gap-contribution-auditor to audit my research gap, nearest-neighbor studies, construct overlap, and claimed contributions."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "literature_rag"
+      description: "Registered local Literature RAG used as the sole literature evidence source"
