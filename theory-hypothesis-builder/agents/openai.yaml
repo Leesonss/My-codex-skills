@@ -1,0 +1,4 @@
+interface:
+  display_name: "Theory and Hypothesis Builder"
+  short_description: "Build evidence-grounded theory and testable hypotheses"
+  default_prompt: "Use $theory-hypothesis-builder to build or audit an evidence-traceable theoretical model and testable hypotheses."
