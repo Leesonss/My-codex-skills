@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reviewer Response and Revision"
+  short_description: "Coordinate reviewer responses and manuscript revisions"
+  default_prompt: "Use $reviewer-response-and-revision to turn a real editorial decision and reviewer comments into a traceable revision workflow."
