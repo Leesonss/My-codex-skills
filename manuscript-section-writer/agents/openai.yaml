@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manuscript Section Writer"
+  short_description: "Draft evidence-grounded manuscript sections"
+  default_prompt: "Use $manuscript-section-writer to draft one evidence-grounded manuscript section from this project."
