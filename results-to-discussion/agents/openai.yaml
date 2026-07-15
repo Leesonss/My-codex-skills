@@ -1,0 +1,4 @@
+interface:
+  display_name: "Results to Discussion"
+  short_description: "Analyze real study results and Discussion claims"
+  default_prompt: "Use $results-to-discussion in Full interpretation mode to evaluate supplied results and prepare a traceable Discussion brief."
