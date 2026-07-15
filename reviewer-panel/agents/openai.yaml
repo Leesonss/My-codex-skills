@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reviewer Panel"
+  short_description: "Balanced four-role pre-submission manuscript review"
+  default_prompt: "Use $reviewer-panel for a balanced pre-submission review of the supplied manuscript or project materials."
