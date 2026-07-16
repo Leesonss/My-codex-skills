@@ -2,3 +2,9 @@ interface:
   display_name: "Reviewer Panel"
   short_description: "Balanced four-role pre-submission manuscript review"
   default_prompt: "Use $reviewer-panel for a balanced pre-submission review of the supplied manuscript or project materials."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "literature_rag"
+      description: "Registered local Literature RAG available for bounded evidence-dependent review checks"

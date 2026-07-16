@@ -7,6 +7,8 @@ description: Interpret and audit real empirical research results for hypothesis 
 
 Convert researcher-confirmed results into a traceable, balanced Discussion analysis. Produce an analysis brief for `$manuscript-section-writer`; do not replace that Skill's final prose drafting.
 
+Read [references/academic-workflow-contract.md](references/academic-workflow-contract.md) before reusing project artifacts or writing outputs. Apply its shared identifiers, evidence labels, incremental-reuse rules, and `handoff-summary.md` contract.
+
 ## Boundaries
 
 - Use only the active project and paths supplied by the user. Never write into this Skill, another Skill, the Literature RAG project, Zotero, PDFs, or an index.
@@ -29,7 +31,7 @@ Select one mode and record it in `00-analysis-brief.md`:
 ## Start The Run
 
 1. Identify the research question, theory, model, hypotheses, constructs, design, sample, measures or manipulations, analyses, results, target journal, language, and requested mode.
-2. Inspect only relevant active-project artifacts. Prefer researcher-confirmed results, then the current model and hypotheses, then applicable outputs from `$theory-hypothesis-builder`, `$gap-contribution-auditor`, `$evidence-synthesis`, and `$citation-claim-auditor`. Check each artifact's date, question, corpus, scope, status, and relevance before reuse.
+2. Read applicable predecessor `handoff-summary.md` files first. Prefer researcher-confirmed results, then the current model and hypotheses, then the relevant artifacts named in those handoffs. Check each artifact's date, question, corpus, scope, status, and relevance before reuse. Apply a delta review: do not rebuild accepted theory, gap, or evidence audits; reassess only what the observed results change, contradict, qualify, or leave unresolved.
 3. Call `literature_status` before any literature retrieval and `list_literature_domains` when the domain is unclear. Use `search_literature` only for focused unresolved literature claims.
 4. Read [references/input-and-decision-rules.md](references/input-and-decision-rules.md) before classifying results.
 5. Apply the result integrity gate. If any material result lacks a source, estimate or direction, uncertainty information, sample/analysis context, or a confirmed hypothesis version, mark the affected item `not currently interpretable`. Do not fill gaps from filenames, table titles, or expectations.
@@ -38,7 +40,7 @@ Select one mode and record it in `00-analysis-brief.md`:
 
 Use the input contract in [references/input-and-decision-rules.md](references/input-and-decision-rules.md). For each hypothesis or major result, record as available:
 
-`study_id`, `hypothesis_id`, original hypothesis, expected direction, analysis designation, estimate/effect size, CI, p value or equivalent statistic, sample size, method/model, source path, and page/table/row/result locator.
+`project_study_id`, `hypothesis_id`, original hypothesis, expected direction, analysis designation, estimate/effect size, CI, p value or equivalent statistic, sample size, method/model, source path, and page/table/row/result locator.
 
 Missing fields are `unavailable`, never inferred. If no real statistical result is supplied, generate only planning materials, alternative-result scenarios, and a missing-input list. Existing literature statistics are not current-project results.
 
@@ -104,7 +106,7 @@ If a core mediator or moderator fails, remove or weaken the corresponding mechan
 
 Use the registered `literature_rag` MCP only for focused comparisons, contradictions, null effects, boundary conditions, or alternatives. Do not recreate an evidence synthesis. The MCP may return passage text, metadata, page, chunk, and result ID, but does not provide a separate full-text or section reader.
 
-Use citation identifiers in this order: Better BibTeX citation key, DOI, Zotero key, attachment key, then returned result ID. Never invent an identifier. Record the query, source ID, result ID, available locator, access level, and uncertainty. Add all material literature-dependent claims, theory claims, boundary claims, alternatives, and strong generalizations to `10-claims-for-citation-audit.md`.
+Use citation identifiers in this order: Better BibTeX citation key, DOI, Zotero key, attachment key, then returned result ID. Never invent an identifier. Record the claim ID, citation handle, source ID, attachment ID, result ID, locator scope and type, available locator, evidence label, access level, retrieval query, and uncertainty. Add all material literature-dependent claims, theory claims, boundary claims, alternatives, and strong generalizations to `10-claims-for-citation-audit.md`.
 
 ## Save Outputs
 
@@ -113,6 +115,8 @@ Create a unique run folder:
 `outputs/results-to-discussion/<YYYY-MM-DD>-<short-topic>/`
 
 Use the files and minimum fields in [references/output-contract.md](references/output-contract.md). Do not create empty or irrelevant files. With real results, always create the hypothesis evaluation, alternative explanations, contribution recalibration, and Discussion brief. With no real results, create only the planning branch specified there.
+
+Create `handoff-summary.md` as the canonical downstream entry point for every saved run, including the no-results planning branch. Record the result package and model versions, predecessor decisions reused, interpretation delta, protected results, permitted and prohibited conclusions, recalibrated contributions, unresolved analyses, and drafting prerequisites.
 
 ## Validation And Testing
 
@@ -134,4 +138,3 @@ Choose exactly one overall verdict:
 - `Key mechanism is unsupported and requires major adjustment`
 - `Results clearly conflict with the theoretical prediction`
 - `Current results are insufficient for a reliable Discussion`
-

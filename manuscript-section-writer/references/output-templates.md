@@ -2,6 +2,8 @@
 
 Create only files with substantive content. Keep unresolved issues outside manuscript prose unless intentionally marked provisional.
 
+For every substantive saved run, also create `handoff-summary.md` using `academic-workflow-contract.md`. Keep manuscript prose in the draft file; use the handoff only for cross-Skill state, protected facts, and next actions.
+
 ## 00-writing-brief.md
 
 ```markdown

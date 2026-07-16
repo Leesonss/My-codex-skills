@@ -7,6 +7,8 @@ description: Audit whether academic claims are accurately, adequately, and propo
 
 Audit the evidence behind claims. Treat the citation as a hypothesis to verify, not as proof merely because its key exists.
 
+Read [references/academic-workflow-contract.md](references/academic-workflow-contract.md) before reusing project artifacts or writing outputs. Apply its shared identifiers, evidence labels, incremental-reuse rules, and `handoff-summary.md` contract.
+
 ## Scope And Guardrails
 
 - Use the registered `literature_rag` MCP as the only literature source unless the user explicitly requests external verification.
@@ -31,7 +33,7 @@ Do not silently escalate Quick or Standard to Forensic.
 ## Start The Run
 
 1. Identify the supplied text, active project, research area, target journal if relevant, citation style, output language, desired rewrite behavior, RAG domain, and requested mode. State reasonable assumptions.
-2. Inspect only relevant project artifacts, including evidence matrices, retrieval logs, construct or theory maps, contradiction logs, hypothesis evidence chains, contribution assessments, verified citation keys, and saved source passages. Reuse an artifact only after checking its question, date, domains, search scope, and relevance.
+2. Read applicable predecessor `handoff-summary.md` files first, then inspect only the artifacts they identify as relevant. Reuse an artifact only after checking its question, date, domains, search scope, status, and relevance. In Quick and Standard modes, audit changed or material claims and do not re-audit unchanged claims already verified under an applicable scope unless a conflict, stronger wording, or new evidence requires it. In Forensic mode, audit every material claim required by the mode even when a prior audit exists; reuse prior retrieval as input, not as a coverage exemption.
 3. Create a unique run folder at `outputs/citation-claim-auditor/<YYYY-MM-DD>-<short-topic>/` in the active project. Do not write to a global output folder or overwrite an earlier run.
 4. Call `literature_status` and, when the corpus or domain is unclear, `list_literature_domains`. Record their status in the audit brief.
 5. If the MCP is unavailable, stop literature-dependent conclusions. You may identify claims and propose a verification plan, but mark dependent items `not verified` and do not assign apparently evidence-based grades.
@@ -68,6 +70,8 @@ Use the file names and minimum content in [references/output-contract.md](refere
 - Current evidence is insufficient for adequate verification.
 
 End the report with unresolved limitations and the judgments that still require human review. Never infer overall text quality from the count of C or D grades alone.
+
+Create `handoff-summary.md` as the canonical downstream entry point. Record the text version, prior audits reused, claim delta, verified and unresolved claim IDs, protected citation handles, required revisions, and next drafting or review action.
 
 ## Test The Skill
 

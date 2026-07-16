@@ -2,6 +2,8 @@
 
 Use only the files for the selected mode. Keep one source of truth for construct definitions and evidence records; cross-reference it instead of duplicating content. Do not create empty files.
 
+Also create `handoff-summary.md` for every substantive saved run using `references/academic-workflow-contract.md`. It is a coordination artifact outside the mode-specific analysis file count.
+
 ## Focused Mode
 
 Create normally:

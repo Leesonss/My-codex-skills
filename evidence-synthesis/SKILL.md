@@ -7,6 +7,8 @@ description: Build traceable literature evidence syntheses from the user's local
 
 Use `literature_rag` as the only literature source. Do not modify its MCP configuration, server, Python environment, PDFs, Zotero library, Chroma index, manifest, or source project.
 
+Read [references/academic-workflow-contract.md](references/academic-workflow-contract.md) before reusing project artifacts or writing outputs. Apply its shared identifiers, evidence labels, incremental-reuse rules, and `handoff-summary.md` contract.
+
 ## Preflight
 
 1. Call `literature_status`. Record the RAG status, indexed chunk count, domain count, and Zotero local API status in `coverage-report.md`.
@@ -26,7 +28,7 @@ Read [references/literature-rag-contract.md](references/literature-rag-contract.
 
 ## Extract And Classify
 
-Create one `source_id` per document. Use `attachment_key` when present; otherwise use `zotero_key`, DOI, citation key, or the returned result ID in that order. For a document with multiple distinct studies, create internal IDs such as `<source_id>:s1` and `<source_id>:s2`.
+Create one `source_id` per document. Use `zotero_key` first only when the response or verified project metadata establishes that it is the parent bibliographic item key; otherwise use DOI, a verified Better BibTeX citation key, then the returned result ID. Record `attachment_key` separately as `attachment_id`; never use an unclassified Zotero key or attachment key to count independent documents. For a document with multiple distinct studies, create `literature_study_id` values such as `<source_id>:s1` and `<source_id>:s2`.
 
 Extract only what the retrieved passage or metadata supports:
 
@@ -46,12 +48,13 @@ Label every substantive claim with exactly one of these values:
 - `cross-study synthesis`: a comparison or pattern across two or more retrieved sources;
 - `inference`: a cautious interpretation that goes beyond any single source;
 - `researcher proposal`: a clearly separated research question or design suggestion.
+- `not verified`: source-level or corpus verification has not been completed.
 
 Do not write formal hypotheses. Keep `researcher proposal` as a non-confirmatory suggestion only.
 
 ## Provenance And Locators
 
-Prefer the Better BibTeX `citation_key`. When absent, use DOI, Zotero key, or the RAG result ID. Never create a citation key.
+Prefer the Better BibTeX `citation_key`. When absent, use DOI, Zotero key, attachment key, or the RAG result ID. Never create a citation key.
 
 Set `locator_type` to one of `page`, `section`, `chunk`, or `unavailable`:
 
@@ -77,8 +80,9 @@ Write all outputs there and never to the Literature RAG project. Create:
 - `synthesis.md`: major findings, contradictions, null effects, boundary conditions, and evidence labels.
 - `open-questions.md`: unresolved questions and clearly labeled researcher proposals.
 - `provenance.json`: one record per substantive claim with its evidence label, source IDs, stable identifiers, quote, locator, and retrieval query.
+- `handoff-summary.md`: canonical downstream entry point using the academic workflow contract.
 
-Include these matrix fields when available: `citation_key`, `stable_id`, `source_id`, `study_id`, `title`, `year`, `theme`, `theory`, `constructs`, `context`, `method_and_sample`, `key_finding`, `contradiction_or_null_effect`, `boundary_condition`, `quote`, `locator_type`, `locator`, `evidence_label`, and `retrieval_query`.
+Include these matrix fields when available: `citation_key`, `citation_handle`, `source_id`, `attachment_id`, `literature_study_id`, `claim_id`, `result_id`, `title`, `year`, `theme`, `theory`, `constructs`, `context`, `method_and_sample`, `key_finding`, `contradiction_or_null_effect`, `boundary_condition`, `quote`, `locator_scope`, `locator_type`, `locator`, `evidence_label`, and `retrieval_query`.
 
 Mark unsupported fields as `unavailable`; never leave an invented value in a cell.
 

@@ -21,7 +21,7 @@ Record missing values as `unavailable`. Do not infer them from a filename, table
 
 Each hypothesis or major result should have:
 
-`study_id`; `hypothesis_id`; original hypothesis; expected direction; `analysis_designation`; estimate and effect-size metric; CI; p value, SE, test statistic, or equivalent; sample size; analysis/model; result source path; page/table/row or result locator; and any manipulation, measurement, or robustness status.
+`project_study_id`; `hypothesis_id`; original hypothesis; expected direction; `analysis_designation`; estimate and effect-size metric; CI; p value, SE, test statistic, or equivalent; sample size; analysis/model; result source path; page/table/row or result locator; and any manipulation, measurement, or robustness status.
 
 When a field is not reported, state that it is unavailable and reduce the interpretation confidence. Do not silently replace a missing CI with a p value or a missing effect size with statistical significance.
 
@@ -84,4 +84,3 @@ Label every suggestion:
 - `optional`: useful future work that should not affect the present verdict.
 
 Do not add analyses merely to obtain significance. Do not recommend unlimited model variants, subgroup searches, or outcome selection.
-

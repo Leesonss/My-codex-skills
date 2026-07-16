@@ -9,6 +9,8 @@ Develop the smallest defensible theoretical model supported by the user's retrie
 
 Use `literature_rag` as the only literature source unless the user separately requests external verification. Never modify its server, configuration, index, PDFs, Zotero library, manifest, source project, or update command. Never modify `evidence-synthesis` or `gap-contribution-auditor`.
 
+Read [references/academic-workflow-contract.md](references/academic-workflow-contract.md) before reusing project artifacts or writing outputs. Apply its shared identifiers, evidence labels, incremental-reuse rules, and `handoff-summary.md` contract.
+
 ## Select The Depth
 
 Choose one mode and record it in the analysis brief:
@@ -37,7 +39,7 @@ Inspect relevant artifacts in this order:
 2. `outputs/evidence-synthesis/*/` coverage, matrices, maps, synthesis, open questions, provenance, and citation keys.
 3. `outputs/gap-contribution-auditor/*/` brief, nearest neighbors, construct-overlap assessment, gap and contribution verdict, risks, and recommendations.
 
-Reuse an artifact only after checking its question, date, domains, search scope, and relevance. Record missing or unsuitable artifacts; never claim to have read them.
+Read applicable predecessor `handoff-summary.md` files first. Reuse an artifact only after checking its question, date, domains, search scope, status, and relevance. Apply a delta review: carry forward accepted gap, contribution, and construct decisions; reassess only changed model elements, unresolved risks, conflicts, or evidence required for theory and hypothesis decisions. Record missing or unsuitable artifacts; never claim to have read them.
 
 If the gap has not been audited, build only a conditional framework and do not assert novelty or contribution. Recommend `$gap-contribution-auditor` for those claims. If no relevant evidence synthesis exists, recommend `$evidence-synthesis`; continue with narrow RAG retrieval only when the user asks to proceed or the bounded task can be supported without recreating a full synthesis.
 
@@ -83,6 +85,8 @@ For every material claim, use exactly one evidence label:
 - `researcher proposal`
 - `not verified`
 
+Create `handoff-summary.md` as the canonical downstream entry point. Record reused predecessor decisions, the delta analyzed, protected constructs and hypotheses, verdict, rejected alternatives, unresolved risks, and drafting prerequisites.
+
 Prefer a real Better BibTeX citation key. When absent, fall back to DOI, Zotero key, attachment key, then result ID. Never invent an identifier or locator. Preserve a short quote, actual locator status, result ID, and retrieval query for direct evidence.
 
 Formal hypothesis sentences must be concise, directional where justified, falsifiable, and matched to the design. Keep full reasoning outside the hypothesis sentence. A `researcher proposal` or `not verified` path may be drafted provisionally, but it cannot be rated `Strong` or presented as evidence-grounded.
@@ -102,4 +106,3 @@ Choose exactly one overall verdict in the user's language:
 Summarize, in proportion to the selected mode: the recommended and rejected theories, core mechanism, largest construct risk, strongest and weakest hypotheses, paths to retain or change, most important rival explanation, minimum viable and recommended models when applicable, evidence still needed, design changes, and decisions reserved for the researcher.
 
 Before completion, verify that direct-evidence claims have a quote and valid locator status, cross-study syntheses cite at least two distinct document-level source IDs, retrieval misses use bounded corpus language, formal hypotheses do not outrun evidence or design, and no source system was modified.
-

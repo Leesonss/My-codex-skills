@@ -2,6 +2,8 @@
 
 Copy the relevant headings into the active project's run folder. Write in the user's requested language. Replace every placeholder; use `unavailable`, `not verified`, or `not scored` instead of inventing content.
 
+In addition to the mode-specific audit files below, create `handoff-summary.md` using `references/academic-workflow-contract.md`. Treat it as the downstream entry point, not as a replacement for the audit evidence.
+
 ## Full Mode
 
 ### 00-audit-brief.md

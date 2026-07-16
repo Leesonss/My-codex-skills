@@ -7,6 +7,8 @@ description: Coordinate post-decision academic manuscript revisions from real ed
 
 Coordinate a traceable revision process from real editorial feedback to verified manuscript changes and a professional point-by-point response. Manage the workflow; do not reproduce a specialist Skill's full task.
 
+Read [references/academic-workflow-contract.md](references/academic-workflow-contract.md) before reusing project artifacts or writing outputs. Apply its shared identifiers, incremental-reuse rules, and `handoff-summary.md` contract.
+
 ## Operating Contract
 
 - Read only the active project and paths supplied by the user. Never modify this Skill, another Skill, the Literature RAG, Zotero, PDFs, indexes, configurations, or source data during a revision run.
@@ -30,8 +32,8 @@ Do not treat a planning output as an implemented revision. A response letter is 
 ## Start The Run
 
 1. Identify the active project root, journal, manuscript title or short topic, revision round, deadline, output language, citation style, and requested mode.
-2. Inventory the decision letter, editor and associate-editor instructions, reviewer comments, current manuscript, revised manuscript or tracked changes, supplementary files, prior response letters, analysis outputs, target-journal instructions, and relevant prior Skill outputs.
-3. Distinguish real editorial feedback from simulated review. If only `$reviewer-panel` output or another simulated report is supplied, label the run `dry-run simulation`, do not draft a submission-ready response, and route real pre-submission review back to `$reviewer-panel`.
+2. Inventory the decision letter, editor and associate-editor instructions, reviewer comments, current manuscript, revised manuscript or tracked changes, supplementary files, prior response letters, analysis outputs, target-journal instructions, and relevant prior Skill outputs. Read applicable `handoff-summary.md` files first and open only the underlying artifacts needed for the current comments or conflicts.
+3. Distinguish real editorial feedback from simulated review. If only `$reviewer-panel` output or another simulated report is supplied, label the run `dry-run simulation`, do not draft a submission-ready response, and route pre-submission or simulated review back to `$reviewer-panel`.
 4. Preserve the original comment hierarchy and wording. Assign stable IDs such as `E1`, `AE1`, and `R1-C1`; append `.a`, `.b`, and so on for atomic tasks split from one comment.
 5. Read [references/revision-workflow-and-output-contract.md](references/revision-workflow-and-output-contract.md) before building or updating the matrix. Read [references/handoff-and-conflict-rules.md](references/handoff-and-conflict-rules.md) before routing work, resolving conflicts, proposing disagreement, or integrating specialist outputs.
 6. Continue with clearly labeled provisional assumptions only for noncritical metadata. Stop the affected action when a missing input prevents accurate analysis, revision verification, or location reporting.
@@ -84,6 +86,8 @@ If the user explicitly authorizes a bounded direct check, call `literature_statu
 
 Integrate returned work into the matrix and revision strategy; do not silently rewrite the manuscript. Verify that each returned artifact matches its comment IDs, expected deliverable, protected constraints, current manuscript version, and evidence scope.
 
+For later rounds or resumed work, apply a delta review. Preserve verified tasks and accepted rebuttals; reassess only reopened comments, changed manuscript passages, new evidence, unresolved dependencies, conflicts, and consistency effects. Never reset a verified item without recording the reason.
+
 Check manuscript-wide consistency in terminology, constructs, theory, hypotheses, study and table numbering, results, causal wording, contributions, limitations, citations, and response locations. Log duplicate or conflicting modifications. When specialist outputs conflict, preserve both positions, apply the authority rules, and require an author decision when the evidence does not resolve the conflict.
 
 Mark `Implemented` only when the actual change or approved rebuttal exists. Mark `Verified` only after locating and checking the relevant revision, analysis, supplement, or response evidence.
@@ -95,6 +99,8 @@ For a substantive project run, create a unique folder:
 `outputs/reviewer-response-and-revision/<YYYY-MM-DD>-<short-topic>-round-<n>/`
 
 Use only the files applicable to the selected mode as defined in the output contract. Preserve prior round folders and stable comment IDs. Do not overwrite earlier runs or create empty reports.
+
+For every substantive saved run, create or update `handoff-summary.md` as the canonical downstream entry point. Record the editorial round, manuscript version, comment coverage, status delta, protected facts, verified and pending tasks, conflicts, specialist inputs, author decisions, and resume condition.
 
 For a quick triage of a few comments, return a concise matrix in chat unless the user requests saved files.
 

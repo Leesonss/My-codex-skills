@@ -35,15 +35,16 @@ Treat every field as optional. The MCP currently has no separate full-text reade
 
 For a document-level `source_id`, use:
 
-1. attachment key;
-2. Zotero key;
-3. DOI;
-4. citation key;
-5. result ID.
+1. `zotero_key` only when the response or verified project metadata establishes that it is the parent bibliographic item key;
+2. DOI;
+3. verified Better BibTeX citation key;
+4. result ID.
+
+If the Zotero key's parent-item semantics are not established, skip it and fall back to DOI, verified Better BibTeX citation key, or result ID. Record an attachment key separately as `attachment_id`; never use an unclassified Zotero key or attachment key to count independent documents.
 
 For a human-readable citation handle, prefer a Better BibTeX citation key. If absent, use DOI, Zotero key, attachment key, then result ID. Never create a citation key.
 
-Group all returned chunks with the same document-level source ID. If one paper contains multiple distinct studies, add internal study IDs such as `<source_id>:s1` only when retrieved evidence supports that distinction.
+Group all returned chunks with the same document-level source ID. If one paper contains multiple distinct studies, add `literature_study_id` values such as `<source_id>:s1` only when retrieved evidence supports that distinction.
 
 ## Locators
 

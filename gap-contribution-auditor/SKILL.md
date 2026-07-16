@@ -9,6 +9,8 @@ Audit claimed research gaps and contributions against the user's retrieved liter
 
 Use `literature_rag` as the only literature source. Do not modify its server, configuration, index, PDFs, Zotero library, manifest, or source project. Do not call its update-command tool. Do not use public web search unless the user separately requests external verification.
 
+Read [references/academic-workflow-contract.md](references/academic-workflow-contract.md) before reusing project artifacts or writing outputs. Apply its shared identifiers, evidence labels, incremental-reuse rules, and `handoff-summary.md` contract.
+
 ## Start The Run
 
 1. Infer `quick` or `full` mode from the request; default to `quick` for a bounded question and `full` for a complete topic, model, Introduction, or contribution audit.
@@ -28,7 +30,7 @@ Use `literature_rag` as the only literature source. Do not modify its server, co
 
 Inspect only the active project and user-provided paths. Do not claim access to all prior projects or conversations.
 
-Look under `outputs/evidence-synthesis/*/` for coverage reports, evidence matrices, maps, syntheses, contradiction or null-effect records, open questions, retrieval logs, provenance, and citation keys. Reuse an artifact only after checking its question, domains, search scope, date, and relevance to the current audit.
+Read the applicable evidence-synthesis `handoff-summary.md` first, then open only the artifacts it identifies as relevant. Reuse an artifact only after checking its question, domains, search scope, date, status, and relevance to the current audit. Apply a delta review: do not recreate accepted synthesis work; retrieve or reassess only novelty threats, unresolved items, conflicts, changed constructs or models, and evidence missing for this audit.
 
 Run supplemental `search_literature` queries only to:
 
@@ -82,6 +84,8 @@ Use [assets/audit-output-templates.md](assets/audit-output-templates.md). In `fu
 - external verification needs.
 
 Keep every material judgment traceable to a citation handle or stable ID, a short quote when direct evidence is claimed, a locator status, the retrieval query, and one evidence label. Do not infer a study's theory, method, sample, or findings from its title.
+
+Create `handoff-summary.md` as the canonical downstream entry point. Record the predecessor artifacts reused, the delta audited, protected decisions, verdict, unresolved risks, and inputs required by the next Skill.
 
 ## Control Claims
 

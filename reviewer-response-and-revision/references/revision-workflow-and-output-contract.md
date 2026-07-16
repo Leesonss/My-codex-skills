@@ -52,6 +52,8 @@ Use `Mandatory`, `High`, `Medium`, or `Optional` for priority. An editor instruc
 
 Create files only when their content is applicable:
 
+- Always create or update `handoff-summary.md` for a substantive saved run using `academic-workflow-contract.md`. Use it as the cross-Skill entry point, not as a second lifecycle-status record.
+
 1. `00-intake-and-preflight.md`: round, decision, input inventory, manuscript version, real-versus-simulated classification, readiness gates, missing inputs, assumptions, and scope limits.
 2. `01-revision-matrix.md`: the canonical matrix, comment relationships, status legend, and coverage count.
 3. `02-revision-strategy.md`: ordered work packages, dependencies, priorities, owners, decision points, milestones, and completion evidence.
@@ -60,7 +62,7 @@ Create files only when their content is applicable:
 6. `05-point-by-point-response-letter.md`: journal-ready responses backed by actual verified revisions or approved rebuttals. Do not create a final-looking file during intake or planning.
 7. `06-revision-checklist.md`: comment coverage, revision-response correspondence, location verification, consistency, unresolved items, manuscript version, and overall readiness. Create only during a completion audit.
 
-For every run folder, keep `01-revision-matrix.md` as the canonical state record. Do not duplicate a conflicting status in another file; link back to the relevant comment ID.
+For every run folder, keep `01-revision-matrix.md` as the canonical task-status record. Use `handoff-summary.md` as the canonical cross-Skill entry point and link its status summary back to matrix comment IDs. Do not duplicate a conflicting lifecycle status in another file.
 
 ## Response Letter Contract
 

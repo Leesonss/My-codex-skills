@@ -6,6 +6,8 @@ Write all reports inside the unique active-project run folder:
 
 Do not write to the Skill directory. Do not create empty files.
 
+For every substantive saved run, also create `handoff-summary.md` using `academic-workflow-contract.md`. Keep detailed claim findings in the mode-specific reports and use the handoff only as their downstream index.
+
 ## Quick audit
 
 Create:
@@ -40,6 +42,6 @@ Only when requested, add:
 
 Use this minimum schema in tables and CSV:
 
-`claim_id | claim_text | claim_type | citation_key | source_id | result_id | locator | query | access_level | grade | supported_portion | finding | disposition`
+`claim_id | claim_text | claim_type | citation_key | citation_handle | source_id | attachment_id | result_id | locator_scope | locator_type | locator | query | evidence_label | access_level | grade | supported_portion | finding | disposition`
 
 Use `unavailable` for missing identifiers and `Unverified citation` when the key cannot be confirmed.
