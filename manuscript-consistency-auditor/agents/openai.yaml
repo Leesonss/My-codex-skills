@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manuscript Consistency Auditor"
+  short_description: "Audit manuscript consistency, argument flow, and revisions"
+  default_prompt: "Use $manuscript-consistency-auditor to audit this manuscript for traceable consistency, argument-chain, and storyline breaks."
