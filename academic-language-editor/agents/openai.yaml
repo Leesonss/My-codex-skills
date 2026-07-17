@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Language Editor"
+  short_description: "Polish academic language without changing scientific meaning"
+  default_prompt: "Use $academic-language-editor to polish this stable manuscript while preserving all scientific content."
