@@ -12,19 +12,23 @@ Read [references/academic-workflow-contract.md](references/academic-workflow-con
 ## Preflight
 
 1. Call `literature_status`. Record the RAG status, indexed chunk count, domain count, and Zotero local API status in `coverage-report.md`.
-2. Call `list_literature_domains` to identify relevant domains. Treat the list as collection metadata, not proof that a domain exhausts the field.
-3. Use `search_literature` for every evidence-gathering query. Do not assume tool names or fields beyond the current response.
-4. Stop any dependent output feature when the MCP is unavailable. Report the limitation instead of inventing data.
+2. Call `list_literature_domains` to identify possible domains. Treat domain labels and counts as collection metadata, not proof that a domain exhausts the field or that a relevant source is correctly classified.
+3. Use `index=global` as the default recall path. Treat `domains` as an optional precision and classification aid, never as a hard exclusion during initial discovery.
+4. Use `search_literature` for every evidence-gathering query. Do not assume tool names or fields beyond the current response.
+5. Stop any dependent output feature when the MCP is unavailable. Report the limitation instead of inventing data.
 
 Read [references/literature-rag-contract.md](references/literature-rag-contract.md) before extracting evidence. It records the currently verified response fields and fallback rules.
 
 ## Scope And Search
 
 1. Ask for a focused research question if one is absent. Keep the first-pass test within roughly 5 to 15 relevant sources.
-2. Construct a search set covering the focal relationship, outcome terms, competing explanations, null or adverse effects, boundary conditions, and adjacent constructs.
-3. Search relevant domains when they are known, then broaden cautiously when domain-restricted results are insufficient.
-4. Deduplicate by the returned source identifier. Do not treat multiple chunks from one paper as independent studies.
-5. Describe coverage only as coverage of the retrieved corpus and queries. Never state that a field has no studies merely because no result was retrieved.
+2. Construct a search set covering the focal relationship, outcome terms, competing explanations, null or adverse effects, boundary conditions, adjacent constructs, and exact identifiers or title phrases when a candidate source is known.
+3. Run a global discovery pass before domain-restricted retrieval. Include exact title/citation-key/DOI queries when available, then run construct and outcome queries with `index=global` and no domain filter. Keep the global pass small and high-recall, typically 2 to 5 queries with `top_k` 10 to 20.
+4. Use relevant domains for a second, domain-assisted precision pass and for research-stream mapping. Compare the source IDs from global and domain-restricted searches. Retain a relevant source found globally even when its `matched_domains` value is empty, surprising, or unrelated to the research topic; verify relevance from its title and retrieved passage instead.
+5. Record the search scope (`global` or domain-restricted), requested domains, returned `resolved_domains` when present, `matched_domains`, and any source found only by the global pass. Treat unexpected domain assignment as a coverage risk to report, not as a reason to discard the source.
+6. Deduplicate by the document-level source identifier. Do not treat multiple chunks, attachment keys, or domain memberships from one paper as independent studies.
+7. Keep the final first-pass set within roughly 5 to 15 unique documents after deduplication, not merely within the `top_k` limit of one query.
+8. Describe coverage only as coverage of the retrieved corpus and queries. Never state that a field has no studies merely because no result was retrieved.
 
 ## Extract And Classify
 
