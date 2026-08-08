@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sync Literature RAG"
+  short_description: "Safely synchronize Zotero changes into the global Literature RAG"
+  default_prompt: "Use $sync-literature-rag to preview and synchronize my Zotero changes into the global Literature RAG."
