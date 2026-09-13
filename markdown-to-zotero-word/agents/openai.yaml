@@ -1,0 +1,4 @@
+interface:
+  display_name: "Markdown to Zotero Word"
+  short_description: "Prepare Markdown, hand off Zotero steps, verify live Word fields"
+  default_prompt: "Use $markdown-to-zotero-word to prepare my Markdown for manual Zotero Scan and Word refresh, or verify my saved result. Pause for me at GUI steps."

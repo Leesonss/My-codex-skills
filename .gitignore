@@ -22,3 +22,7 @@
 !/academic-language-editor/**
 !/sync-literature-rag/
 !/sync-literature-rag/**
+!/markdown-to-zotero-word/
+!/markdown-to-zotero-word/**
+/markdown-to-zotero-word/scripts/__pycache__/
+/markdown-to-zotero-word/**/*.pyc
