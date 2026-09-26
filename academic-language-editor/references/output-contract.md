@@ -6,6 +6,8 @@ Create outputs only in the active project:
 
 Never overwrite the source or a prior run. Record the exact canonical input path, version, reviewed scope, exclusions, and output format.
 
+For a bounded Conservative Copyedit or Section Language Edit, use compact packaging unless expanded reports are requested: the complete edited text/section and `handoff-summary.md`. Keep the brief, material change log, protected-content comparison, and unresolved Author Queries in labelled handoff sections, not in clean prose. A bounded Post-Edit Verification may similarly use one verification report plus handoff while preserving every required comparison. Full-manuscript polish and full-manuscript Post-Edit Verification retain the expanded files below. Profile selection never permits skipping semantic checks or relabelling an unverified manuscript as final.
+
 ## Conservative Copyedit
 
 For a short chat-only passage, return the complete edited passage, the gate, important protected-content notes, unresolved Author Queries, and a concise handoff without creating files unless requested.

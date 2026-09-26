@@ -1,6 +1,6 @@
 ---
 name: gap-contribution-auditor
-description: Audit research topics, research gaps, theoretical contributions, construct distinctiveness, nearest-neighbor studies, and Reviewer 2 objections using the registered literature_rag MCP and relevant evidence-synthesis outputs. Use when evaluating whether a research topic is worth pursuing, checking novelty or construct overlap, reviewing gap or contribution claims in an Introduction, assessing conceptual, mediation, or moderation models, or stress-testing a claimed academic contribution. Do not use for ordinary literature summaries, full literature reviews, direct hypothesis or manuscript drafting, statistical analysis, scale development, experimental material generation, grant writing, or evidence-free brainstorming.
+description: Audit research gaps, contributions, construct distinctiveness, and nearest-neighbor studies using literature_rag and applicable prior evidence. Use to assess a topic, model, or novelty claim in a manuscript or proposal. Do not use for broad literature synthesis, hypothesis or manuscript drafting, statistics, scale development, experimental materials, complete grant drafting, or evidence-free brainstorming.
 ---
 
 # Gap And Contribution Auditor
@@ -15,15 +15,15 @@ Read [references/academic-workflow-contract.md](references/academic-workflow-con
 
 1. Infer `quick` or `full` mode from the request; default to `quick` for a bounded question and `full` for a complete topic, model, Introduction, or contribution audit.
 2. Identify the focal phenomenon, research question, variables and roles, theory, context, population, method, claimed gaps, claimed contributions, target literature or journal, time range, output language, and requested Literature RAG domain.
-3. Continue with clearly labeled provisional assumptions when noncritical inputs are absent. Ask only when no relevant domain can be selected after listing the available domains, or when the research question itself cannot be identified.
-4. Create the run folder in the active project, never in this Skill or the Literature RAG project:
+3. Continue with clearly labeled provisional assumptions when noncritical inputs are absent. Ask when the research question cannot be identified; an unknown domain is not a blocker to global retrieval.
+4. For a saved run, create the folder in the active project, never in this Skill or the Literature RAG project:
    `outputs/gap-contribution-auditor/<YYYY-MM-DD>-<short-topic>/`
 5. Read [references/literature-rag-contract.md](references/literature-rag-contract.md) before any evidence retrieval.
 
 ## Check Evidence Availability
 
-1. Call `literature_status` and record status, indexed chunk count, semantic domain count, and Zotero local API status.
-2. Call `list_literature_domains`; treat domains as corpus scope metadata, not proof of field-wide coverage.
+1. Before the first new retrieval, call `literature_status` and record available scope/status fields. For a reuse-only audit, cite prior retrieval scope and disclose that the live index was not rechecked.
+2. Call `list_literature_domains` only when classification or precision filtering is needed; follow the shared global-first retrieval policy.
 3. If the MCP is unavailable, stop all literature-dependent claims. Do not substitute model memory, invent citations, or assign apparently precise evidence-based scores. Complete only a conceptual framework and mark dependent claims `not verified` and scores `not scored` or `provisional`.
 
 ## Reuse Prior Synthesis
@@ -74,7 +74,7 @@ Read [references/evidence-and-scoring-rules.md](references/evidence-and-scoring-
 
 ## Write The Outputs
 
-Use [assets/audit-output-templates.md](assets/audit-output-templates.md). In `full` mode, create all eleven numbered files in the template. In `quick` mode, files may be combined, but never omit:
+Use [assets/audit-output-templates.md](assets/audit-output-templates.md). In `full` mode, create the applicable expanded reports; omit only non-applicable reports with a reason. In `quick` mode, use chat-only or `quick-audit.md` plus `handoff-summary.md`, retaining the following checks at the bounded scope:
 
 - nearest-neighbor analysis;
 - weakening or contrary evidence;

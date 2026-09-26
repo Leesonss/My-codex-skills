@@ -6,6 +6,10 @@ Create outputs only in the active project:
 
 Never overwrite a prior run. Record the canonical manuscript version and exact input paths in every run.
 
+For a bounded baseline scope or post-revision delta, use the shared chat-only/compact profile unless expanded reports are requested. A saved compact run uses `consistency-audit.md` plus `handoff-summary.md`; retain the brief, model, issue matrix, dependency map, backlog, and applicable verification report as labelled sections. Preserve all prior Issue/Task IDs, statuses, evidence locations, and required propagation checks. Existing expanded inputs need not be regenerated or converted.
+
+The labelled Matrix and Backlog sections are authoritative in compact runs; all references to their named files below resolve to those sections via the handoff. A zero-issue compact run records reviewed scope and zero findings once, without creating multiple empty tables. Full-manuscript baseline and Final Consistency Check retain the expanded layouts below; compact packaging never lowers verification prerequisites.
+
 ## Baseline Audit
 
 Create:

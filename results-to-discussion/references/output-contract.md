@@ -10,6 +10,8 @@ For every saved run, also create `handoff-summary.md` using `academic-workflow-c
 
 ## Full interpretation files
 
+Rapid interpretation uses chat-only for an unsaved bounded task, or `09-discussion-brief.md` plus `handoff-summary.md` for a saved one. Include input identity and integrity gate, locatable result records, support/designation/confidence, alternatives, contribution limits, and allowed/prohibited conclusions as sections in the brief. Do not omit checks to reduce files. Full interpretation retains the expanded files below.
+
 Create these files when their content is applicable:
 
 1. `00-analysis-brief.md`: mode, question, theory, model, study inventory, input inventory, result-integrity gate, RAG status/domains, artifact dates/scope, conflicts, and missing fields.
@@ -25,11 +27,11 @@ Create these files when their content is applicable:
 11. `10-claims-for-citation-audit.md`: claim ID, claim text, claim type, citation key and citation handle, source ID, attachment ID, result ID, locator scope, locator type, locator, evidence label, access level, retrieval query, and reason for audit.
 12. `11-executive-summary.md`: plain-language verdict, strongest allowed conclusion, prohibited conclusions, unresolved issues, and researcher decisions.
 
-Do not create empty files. With real results, `02`, `06`, `07`, and `09` are mandatory even for a small run. Omit `03` for a single study and explain the omission in `00`.
+Do not create empty files. With real results, the contents of `02` (when hypotheses exist), `06`, `07`, and `09` are mandatory; Rapid mode combines them as described above. Omit `03` for a single study and explain the omission in the brief.
 
 ## No-results planning branch
 
-When the integrity gate is `Red`, create only these domain reports plus `handoff-summary.md`:
+When the integrity gate is `Red`, use a compact planning brief and handoff (or chat-only when no saved output is requested), containing the records below. Split these files only for an explicitly expanded planning request:
 
 - `00-analysis-brief.md` with missing inputs and gate status;
 - `09-discussion-brief.md` as a clearly labelled planning/scenario scaffold;

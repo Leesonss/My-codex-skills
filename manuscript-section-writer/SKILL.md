@@ -36,7 +36,7 @@ Use the user's requested language, citation format, terminology, and length. Pre
    5. `outputs/citation-claim-auditor/*/` critical-claim audits, citation mappings, wording calibrations, and recommended revisions.
    6. Verified source passages, citation keys, and locators.
 5. Read applicable predecessor `handoff-summary.md` files first. Reuse an artifact only after checking its date, research question, corpus/domain, search scope, status, and relevance. Draft from accepted inputs and address only the requested section delta; do not reopen settled gap, theory, model, result, or citation decisions unless the draft exposes a conflict or missing premise. Record material omissions and conflicts. Prefer a researcher-confirmed version; otherwise prefer the higher-audit-status and newer applicable version. Never choose the version that merely makes the manuscript sound stronger.
-6. Call the registered `literature_rag` only for a focused unresolved citation or source check. Call `literature_status` before retrieval and `list_literature_domains` when the domain is unclear. Do not recreate a full synthesis, gap audit, theory-selection exercise, or index update.
+6. Call the registered `literature_rag` only for a focused unresolved citation or source check. Check `literature_status` before the first retrieval and list domains only when classification or precision filtering is needed. Follow the shared reuse-first, global-first policy; do not recreate a full synthesis, gap audit, theory-selection exercise, or index update.
 
 Continue with clearly marked provisional assumptions when a noncritical input is missing. Do not repeatedly ask for information already present in the active project.
 
@@ -81,7 +81,7 @@ For a substantive project run, create a unique folder:
 
 `outputs/manuscript-section-writer/<section-slug>/<YYYY-MM-DD>-<short-topic>/`
 
-Use the relevant files from [references/output-templates.md](references/output-templates.md). Normally create `00-writing-brief.md`, `01-outline.md`, `02-draft.md`, `03-evidence-and-citation-notes.md`, and `04-self-audit.md`. Create `05-revised-draft.md` only for a revision. For a quick paragraph rewrite, return the revised text and a short change note without empty files.
+Use the relevant files from [references/output-templates.md](references/output-templates.md). A bounded section from established inputs normally uses the compact profile: a complete `02-draft.md` (or `05-revised-draft.md`) and `handoff-summary.md`. Keep the brief, evidence links, checks, and unresolved decisions in the handoff; do not put audit commentary in manuscript prose. Create the expanded brief, outline, evidence notes, and self-audit files only for a complex task or when requested. For a quick paragraph rewrite, return the revised text and a short change note without files.
 
 For a substantive saved run, also create `handoff-summary.md` as the canonical downstream entry point. Record the source and draft versions, predecessor decisions reused, drafting delta, protected terminology and claims, gate status, citation-audit targets, and unresolved author decisions.
 

@@ -161,7 +161,7 @@ In addition to the mode-specific audit files below, create `handoff-summary.md` 
 
 ## Quick Mode
 
-Create at minimum:
+For a compact saved Quick run, create `quick-audit.md` and `handoff-summary.md`; retain the following content as headings in the audit rather than separate files. For chat-only, return the same relevant checks without saving files. An explicitly expanded Quick report may use these filenames:
 
 - `00-audit-brief.md`;
 - `01-retrieval-log.md`;

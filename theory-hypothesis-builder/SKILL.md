@@ -1,6 +1,6 @@
 ---
 name: theory-hypothesis-builder
-description: Build and audit evidence-traceable theoretical frameworks and testable hypotheses from literature-grounded research gaps or conceptual models. Use when selecting or comparing theories; defining constructs and checking overlap; deriving or reviewing direct effects, mediation, moderation, or moderated mediation; testing rival mechanisms, reverse causality, and causal identification; simplifying conceptual models; or preparing structured hypotheses-development materials. Reuse relevant evidence-synthesis and gap-contribution-auditor outputs from the active project and use the registered literature_rag only for targeted evidence gaps. Do not use for ordinary literature reviews, standalone gap or contribution audits, full Introduction or Discussion drafting, statistical analysis, scale development, experimental materials, grant writing, or evidence-free variable brainstorming.
+description: Build or audit evidence-traceable theories, constructs, mechanisms, conceptual models, and testable hypotheses for manuscripts or proposals. Reuse accepted project evidence and retrieve only material gaps. Do not use for standalone literature or novelty audits, full manuscript or grant drafting, statistics, scale development, experimental materials, or evidence-free variable brainstorming.
 ---
 
 # Theory Hypothesis Builder
@@ -13,7 +13,7 @@ Read [references/academic-workflow-contract.md](references/academic-workflow-con
 
 ## Select The Depth
 
-Choose one mode and record it in the analysis brief:
+Choose one mode and record it in the analysis brief. A conceptual or exploratory research question need not be forced into a directional hypothesis model; explain non-applicable hypothesis fields.
 
 - `focused`: one path, construct, mediator, moderator, hypothesis, or bounded theory comparison.
 - `standard`: default for a bounded conceptual, mediation, or moderation model.
@@ -45,7 +45,7 @@ If the gap has not been audited, build only a conditional framework and do not a
 
 ## Check Evidence Availability
 
-Before retrieving evidence, read [references/analysis-rules.md](references/analysis-rules.md), call `literature_status`, and call `list_literature_domains`. Treat domains as corpus metadata, not exhaustive field coverage.
+Before retrieving evidence, read the applicable evidence rules in [references/analysis-rules.md](references/analysis-rules.md) and check `literature_status`. Follow the shared global-first policy; list domains only when needed for classification or precision filtering.
 
 Use `search_literature` only for unresolved, material needs such as:
 

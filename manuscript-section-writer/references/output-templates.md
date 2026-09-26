@@ -4,6 +4,8 @@ Create only files with substantive content. Keep unresolved issues outside manus
 
 For every substantive saved run, also create `handoff-summary.md` using `academic-workflow-contract.md`. Keep manuscript prose in the draft file; use the handoff only for cross-Skill state, protected facts, and next actions.
 
+For compact established-input drafting or revision, the templates below specify required record content, not separate files. Save the complete draft and handoff; put evidence links, brief, checks, and open issues in labelled handoff sections without duplicating prior evidence tables. An outline-only request may save the outline and handoff instead. The expanded layout remains available for complex work and explicit requests.
+
 ## 00-writing-brief.md
 
 ```markdown

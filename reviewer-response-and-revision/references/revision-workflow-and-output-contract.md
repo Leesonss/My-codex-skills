@@ -50,6 +50,8 @@ Use `Mandatory`, `High`, `Medium`, or `Optional` for priority. An editor instruc
 
 ## Output Files
 
+A bounded intake/planning task may use chat-only or compact packaging under the shared contract. For a compact saved run, keep `01-revision-matrix.md` and `handoff-summary.md`; include preflight, strategy, and applicable handoff content as labelled sections in the matrix. Preserve original comments, atomic task IDs, all lifecycle states, dependencies, and evidence requirements. Completion audit and complex integration retain the applicable expanded files below; do not compress away any response-to-revision verification.
+
 Create files only when their content is applicable:
 
 - Always create or update `handoff-summary.md` for a substantive saved run using `academic-workflow-contract.md`. Use it as the cross-Skill entry point, not as a second lifecycle-status record.

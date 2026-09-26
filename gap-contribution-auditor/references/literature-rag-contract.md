@@ -16,7 +16,7 @@ Do not call `literature_update_command`. Do not run any command returned by it.
 - Use `index: default` or `index: global` only when supported by the live schema.
 - Use a bounded `top_k` appropriate to the query.
 - Do not refer to unsupported namespaces or arbitrary metadata filters.
-- Search a known relevant domain first; broaden cautiously when domain-restricted results are insufficient.
+- Reuse applicable verified evidence first. For new discovery use `index: global` with no domain filter when supported; locate known papers by identifier/title. Use domains only as optional precision aids, and disclose unavailable global coverage. Do not treat a domain-filtered miss as evidence of absence.
 
 ## Optional Result Fields
 

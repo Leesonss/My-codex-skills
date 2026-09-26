@@ -19,6 +19,7 @@ Read [references/academic-workflow-contract.md](references/academic-workflow-con
 - Do not interpret statistics, decide hypothesis support, or recalibrate contributions. Route empirical interpretation to `$results-to-discussion`.
 - Do not assess novelty, theoretical validity, methodological adequacy, editorial importance, or submission readiness.
 - Do not detect authorship or remove AI traces. Route explicit simplified-Chinese de-AI requests to `$qu-ai-wei`.
+- Stable proposal prose may receive bounded language editing with the same protected-content checks. Preserve the distinction between existing research, planned work, and expected outcomes; do not convert the task into grant drafting, feasibility assessment, or funder-compliance review. Routine scholarly polish does not require a de-AI pass.
 - Recommend later capabilities through handoff information only; never claim another Skill ran.
 
 ## Select One Mode

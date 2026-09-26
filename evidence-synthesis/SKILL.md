@@ -11,8 +11,8 @@ Read [references/academic-workflow-contract.md](references/academic-workflow-con
 
 ## Preflight
 
-1. Call `literature_status`. Record the RAG status, indexed chunk count, domain count, and Zotero local API status in `coverage-report.md`.
-2. Call `list_literature_domains` to identify possible domains. Treat domain labels and counts as collection metadata, not proof that a domain exhausts the field or that a relevant source is correctly classified.
+1. Before new retrieval, call `literature_status`. Record available RAG status and scope fields in the coverage record. A focused reuse-only update must identify prior verified passages and disclose that the live index was not rechecked.
+2. Call `list_literature_domains` only when domain classification or a precision pass is needed. Treat domain labels and counts as collection metadata, not proof that a domain exhausts the field or that a relevant source is correctly classified.
 3. Use `index=global` as the default recall path. Treat `domains` as an optional precision and classification aid, never as a hard exclusion during initial discovery.
 4. Use `search_literature` for every evidence-gathering query. Do not assume tool names or fields beyond the current response.
 5. Stop any dependent output feature when the MCP is unavailable. Report the limitation instead of inventing data.
@@ -20,6 +20,8 @@ Read [references/academic-workflow-contract.md](references/academic-workflow-con
 Read [references/literature-rag-contract.md](references/literature-rag-contract.md) before extracting evidence. It records the currently verified response fields and fallback rules.
 
 ## Scope And Search
+
+Choose `focused update` for a bounded evidence gap in an existing project and `synthesis` for a new literature map. In a focused update, read the applicable handoff and verified passages first, then search only the missing relationship, source, or conflict. Do not force the discovery query set, source-count target, or domain comparison below onto a known-item check. Preserve full provenance for every added or changed material claim.
 
 1. Ask for a focused research question if one is absent. Keep the first-pass test within roughly 5 to 15 relevant sources.
 2. Construct a search set covering the focal relationship, outcome terms, competing explanations, null or adverse effects, boundary conditions, adjacent constructs, and exact identifiers or title phrases when a candidate source is known.
@@ -71,11 +73,11 @@ Record the query that retrieved the evidence. Preserve a short direct quote rath
 
 ## Required Outputs
 
-Create a run folder in the active project:
+For a saved run, create a folder in the active project:
 
 `outputs/evidence-synthesis/<YYYY-MM-DD>-<short-topic>/`
 
-Write all outputs there and never to the Literature RAG project. Create:
+Write all outputs there and never to the Literature RAG project. Apply the shared output profiles: a focused update normally uses chat-only or `evidence-update.md` plus `handoff-summary.md`, with coverage, evidence rows, quotes, locators, queries, and limitations retained as sections. For a synthesis using expanded outputs, create:
 
 - `coverage-report.md`: RAG status, domain scope, all searches, unique sources, scope limits, and unavailable capabilities.
 - `evidence-matrix.csv`: one row per study where possible, otherwise one row per source.

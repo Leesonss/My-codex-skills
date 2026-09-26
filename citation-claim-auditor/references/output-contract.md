@@ -10,11 +10,7 @@ For every substantive saved run, also create `handoff-summary.md` using `academi
 
 ## Quick audit
 
-Create:
-
-1. `quick-audit-summary.md` - mode, scope, key RAG limitation, top findings, and verdict.
-2. `priority-issues.md` - issue ID, severity, claim ID, citation key, evidence status, finding, and action.
-3. `suggested-revisions.md` - original wording, replacement wording, and rationale.
+Use chat-only for a bounded unsaved passage. For a saved Quick audit, create `quick-audit-summary.md` and `handoff-summary.md`. Put scope, evidence records, issues, original/replacement wording, rationale, verdict, and limits in the summary; preserve claim IDs and actual locators. Split detailed issue/revision files only if explicitly requested or needed for usability.
 
 ## Standard audit
 

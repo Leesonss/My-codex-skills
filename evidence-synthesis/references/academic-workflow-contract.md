@@ -1,6 +1,6 @@
 # Academic Workflow Contract
 
-Contract version: 1
+Contract version: 1.1
 
 Read this contract before reusing predecessor artifacts or writing a substantive run. Use it to keep identifiers, evidence status, handoffs, and incremental review consistent across the academic Skill suite.
 
@@ -8,7 +8,7 @@ Read this contract before reusing predecessor artifacts or writing a substantive
 
 Record these fields in every substantive run:
 
-- `contract_version`: `1`;
+- `contract_version`: `1.1`;
 - `run_id`: `<skill>-<YYYY-MM-DD>-<short-topic>`, with a numeric suffix when needed;
 - `skill`, `stage`, `mode`, `created_at`, and active `project_root`;
 - research question or bounded task;
@@ -17,6 +17,42 @@ Record these fields in every substantive run:
 - `supersedes` when the run replaces an earlier artifact.
 
 Do not select an artifact only because it is newest. Check topic, question, model, corpus or data scope, status, and researcher approval.
+
+Version 1 artifacts remain usable after the same relevance and version checks; do not regenerate them merely to upgrade this contract.
+
+## Task Entry And Output Depth
+
+Enter at the requested task, not at the start of an obligatory Skill chain. Read the relevant reference sections only; load schemas when producing their records. Do not repeat installation tests during ordinary research work.
+
+Select an output profile separately from the scientific mode:
+
+- `chat-only`: a bounded question or passage with no requested saved deliverable. Return the result, material evidence/limitations, and a short handoff; create no files.
+- `compact`: a bounded saved task using established inputs, such as a local evidence update, one path, one section, a Quick citation audit, Rapid interpretation, or a focused review. Save the primary deliverable and `handoff-summary.md`. Keep required evidence, checks, issue/task IDs, and verification records as sections in that deliverable or in the handoff for clean prose; split a supporting file only when it materially improves usability.
+- `expanded`: an explicitly full or Forensic audit, a frozen-submission check, full-manuscript language polish/verification, a completion audit, or a complex cross-study/framework task. Retain the Skill's applicable named reports and complete coverage.
+
+These profiles govern packaging, not scientific standards, mode prerequisites, or authority to edit source files. A compact review with insufficient evidence must still report that limit, not invent a passing verdict. Honor an explicitly requested report layout. In compact mode, named report references in a Skill mean the corresponding labelled sections; the handoff must identify their actual file paths and headings. Existing expanded reports remain valid inputs.
+
+Do not duplicate a claim table or detailed finding in the summary and handoff. Link its authoritative location and summarize only the verdict, protected facts, unresolved blockers, and next action. Fields without a role in the task may be marked not applicable together.
+
+## Shared Retrieval Policy
+
+Reuse applicable verified passages first. Retrieve only for a new or changed material claim, a conflict, a scope expansion, or an explicit source re-verification. Before the first retrieval in a run, check `literature_status`; reuse that check within the run unless the tool fails or the index changes. List domains only when classification or precision filtering is needed.
+
+For new-evidence discovery, use `index=global` without a domain filter first when supported by the live schema. Locate known papers by exact identifier/title before broader queries. Use domain filters as optional precision aids, never as proof of absence. Record unsupported global search as a scope limitation rather than silently equating a smaller index with global coverage. Do not run both broad discovery and domain searches for every known-item check.
+
+## Project Entry And Human Decisions
+
+When resuming, read project instructions and an existing project-state index before the relevant handoff. An index is optional: prefer the project's current convention. If repeated multi-stage work needs one and saving project coordination files is authorized, keep a small `academic-project-state.md` with canonical draft/model versions, links to current handoffs, protected decisions, unresolved blockers, and the next bounded action. It is a pointer list, not a second evidence or issue database. Append dated decisions without replacing prior history; do not create it for a one-off question.
+
+Continue within approved scope without asking the author to reconfirm settled details. Pause the affected work for research positioning/model changes, new design or resource commitments, material evidence/version conflicts, or final release decisions. Do not interpret this as authority to operate another Skill, modify external systems, or submit a document.
+
+## Manuscript And Proposal Boundaries
+
+Record whether the target is a manuscript or a proposal. Evidence, gap, theory, and citation analysis can support a proposal within each Skill's stated scope; they do not become whole-application writing or funder-compliance review.
+
+Keep established findings, existing research basis, proposed mechanisms, planned procedures, and expected outcomes distinct. A proposal does not need completed project results; never turn expected outcomes into observed findings. Actual funder rules require user-supplied or explicitly verified material. Check only the supplied scientific chain (question, objective, research content, method, expected outcome); do not invent feasibility, approvals, preliminary data, budgets, or team achievements.
+
+Use substantive review before final language polish when changes are likely. Use academic language editing for routine scholarly polish; de-AI editing is not a mandatory stage. Literature synchronization and live Word citation conversion are separate authorized tasks, not automatic prerequisites to writing.
 
 ## Shared Evidence Fields
 

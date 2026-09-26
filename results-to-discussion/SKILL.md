@@ -25,14 +25,14 @@ Read [references/academic-workflow-contract.md](references/academic-workflow-con
 Select one mode and record it in `00-analysis-brief.md`:
 
 - `Rapid interpretation`: a simple single-study result set.
-- `Full interpretation`: default; mediation, moderation, conditional indirect effects, or multiple studies.
+- `Full interpretation`: mediation, moderation, conditional indirect effects, or multiple studies. Use Rapid for a bounded simple result set; do not infer Full from an unspecified request alone.
 - `Critical interpretation`: many null or contrary findings, cross-study inconsistency, submission review, or HARKing risk.
 
 ## Start The Run
 
 1. Identify the research question, theory, model, hypotheses, constructs, design, sample, measures or manipulations, analyses, results, target journal, language, and requested mode.
 2. Read applicable predecessor `handoff-summary.md` files first. Prefer researcher-confirmed results, then the current model and hypotheses, then the relevant artifacts named in those handoffs. Check each artifact's date, question, corpus, scope, status, and relevance before reuse. Apply a delta review: do not rebuild accepted theory, gap, or evidence audits; reassess only what the observed results change, contradict, qualify, or leave unresolved.
-3. Call `literature_status` before any literature retrieval and `list_literature_domains` when the domain is unclear. Use `search_literature` only for focused unresolved literature claims.
+3. Call `literature_status` before the first literature retrieval and list domains only when classification or precision filtering is needed. Follow the shared reuse-first, global-first policy; search only for focused unresolved literature claims.
 4. Read [references/input-and-decision-rules.md](references/input-and-decision-rules.md) before classifying results.
 5. Apply the result integrity gate. If any material result lacks a source, estimate or direction, uncertainty information, sample/analysis context, or a confirmed hypothesis version, mark the affected item `not currently interpretable`. Do not fill gaps from filenames, table titles, or expectations.
 
@@ -110,11 +110,11 @@ Use citation identifiers in this order: Better BibTeX citation key, DOI, Zotero 
 
 ## Save Outputs
 
-Create a unique run folder:
+For a saved run, create a unique folder; a bounded chat-only interpretation creates no files:
 
 `outputs/results-to-discussion/<YYYY-MM-DD>-<short-topic>/`
 
-Use the files and minimum fields in [references/output-contract.md](references/output-contract.md). Do not create empty or irrelevant files. With real results, always create the hypothesis evaluation, alternative explanations, contribution recalibration, and Discussion brief. With no real results, create only the planning branch specified there.
+Use the files and minimum fields in [references/output-contract.md](references/output-contract.md). Do not create empty or irrelevant files. With real results, always include hypothesis evaluation when applicable, alternative explanations, contribution recalibration, and a Discussion brief; Rapid mode may combine these records. With no real results, use only the planning branch specified there.
 
 Create `handoff-summary.md` as the canonical downstream entry point for every saved run, including the no-results planning branch. Record the result package and model versions, predecessor decisions reused, interpretation delta, protected results, permitted and prohibited conclusions, recalibrated contributions, unresolved analyses, and drafting prerequisites.
 

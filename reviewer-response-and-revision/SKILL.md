@@ -73,6 +73,8 @@ Use this routing map:
 - `$results-to-discussion`: interpretation of real results, hypothesis support, alternatives, and contribution recalibration; use its brief before final Discussion prose.
 - `$manuscript-section-writer`: final revision or restructuring of one manuscript section from established inputs.
 - `$reviewer-panel`: optional post-revision simulation only, never the real response workflow.
+- `$manuscript-consistency-auditor`: cross-section conflicts and propagation checks on the integrated manuscript, not reviewer-comment coverage or response-letter compliance.
+- `$academic-language-editor`: language editing and semantic preservation after substantive revisions, including protection of reviewer commitments.
 
 Route final Discussion prose to `$manuscript-section-writer` after `$results-to-discussion` when empirical interpretation is required. Assign statistical computation, new analyses, robustness checks, and uncovered methods work to the author or statistician; mark the task blocked until real output is supplied.
 
@@ -88,7 +90,7 @@ Integrate returned work into the matrix and revision strategy; do not silently r
 
 For later rounds or resumed work, apply a delta review. Preserve verified tasks and accepted rebuttals; reassess only reopened comments, changed manuscript passages, new evidence, unresolved dependencies, conflicts, and consistency effects. Never reset a verified item without recording the reason.
 
-Check manuscript-wide consistency in terminology, constructs, theory, hypotheses, study and table numbering, results, causal wording, contributions, limitations, citations, and response locations. Log duplicate or conflicting modifications. When specialist outputs conflict, preserve both positions, apply the authority rules, and require an author decision when the evidence does not resolve the conflict.
+Verify comment-to-change mappings, response locations, actual implementation, and reviewer commitments. Reuse a current consistency report for the integrated manuscript; do not reproduce its complete audit. If no applicable report exists, check changed passages and propagation dependencies, disclose the scope, and recommend the consistency specialist for material cross-section risk. Log conflicting modifications and require an author decision when evidence cannot resolve them.
 
 Mark `Implemented` only when the actual change or approved rebuttal exists. Mark `Verified` only after locating and checking the relevant revision, analysis, supplement, or response evidence.
 

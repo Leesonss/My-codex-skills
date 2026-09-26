@@ -1,11 +1,11 @@
 ---
 name: reviewer-panel
-description: Conduct a balanced four-role pre-submission academic manuscript review. Use for editorial screening, peer-review simulation, submission-readiness assessment, theory/method/context/evidence risk review, focused chapter review, and simulated second-round review of a revised manuscript before submission. Do not use for real editorial decisions, real reviewer-response letters, post-decision revision coordination, full manuscript rewriting, standalone literature review, gap auditing, theory construction, statistical analysis, language editing, APA checks, or grant writing.
+description: Review academic manuscripts before submission using a balanced four-role panel or a focused section/issue review. Use for editorial screening, scientific risks, submission readiness, and simulated revision review. Do not use for real editorial decisions or response coordination, full rewriting, standalone specialist audits, statistics, language editing, or grant review.
 ---
 
 # Reviewer Panel
 
-Run one workflow only: **Balanced Panel Review**. The purpose is to identify evidence-backed risks, preserve meaningful strengths, rank revisions, and state what the author must decide. Do not manufacture defects, flatter the author, or repeat a specialist Skill's full task.
+Use **Balanced Panel Review** for a full manuscript or an explicit panel request, and **Focused Review** for a bounded section, issue, or revision delta. Identify evidence-backed risks, preserve meaningful strengths, rank revisions, and state author decisions. Do not manufacture defects or repeat a specialist Skill's full task.
 
 Read [references/academic-workflow-contract.md](references/academic-workflow-contract.md) before reusing project artifacts or writing outputs. Apply its shared identifiers, incremental-reuse rules, and `handoff-summary.md` contract.
 
@@ -31,7 +31,7 @@ If the active project contains only conceptual outputs, run a limited conceptual
 
 ## Fixed Roles
 
-Use exactly these four logical roles. Do not add a domain profile or optional reviewer.
+Balanced Panel Review uses the four logical roles below. Focused Review uses only the relevant roles from this set and records which were used; it must not imply a full panel or whole-manuscript readiness. Do not add new roles.
 
 1. **Editor**: central message, importance, Introduction framing, positioning, field or target-journal fit, dispersion, contribution threshold, desk-rejection risk, and overall editorial readiness. Do not re-check every hypothesis or statistic.
 2. **Theory and Contribution Reviewer**: gap accuracy and importance, nearest-neighbor overlap, theory-mechanism fit, construct boundaries, mediator/moderator necessity, hypothesis logic, contribution type, simplicity, and overclaiming.
@@ -70,7 +70,7 @@ The final consolidated report may contain at most 6 Major concerns, 6 Moderate/M
 
 ## Balance And Boundaries
 
-Record 2-4 substantive strengths, not generic praise. Do not require the paper to solve the whole field, add variables or studies without a core reason, reject a simple model merely for being simple, treat statistical significance as theoretical importance, treat nonsignificance as support, turn exploratory results into confirmatory evidence, or turn correlation into strong causality.
+Balanced Panel Review records 2-4 substantive strengths, not generic praise. Focused Review records only strengths supported and relevant within its scope, with no quota. Do not require the paper to solve the whole field, add variables or studies without a core reason, reject a simple model merely for being simple, treat statistical significance as theoretical importance, treat nonsignificance as support, turn exploratory results into confirmatory evidence, or turn correlation into strong causality.
 
 When identifying a substantive problem, distinguish writing-only repair from literature clarification, theory/model revision, measurement or design revision, analysis/robustness work, and new evidence. Do not describe a writing change as sufficient for a theoretical or methodological failure.
 
@@ -78,15 +78,19 @@ Target-journal assessment requires user-supplied journal information. Without it
 
 ## Output Contract
 
-Write exactly four review report files under `outputs/reviewer-panel/<YYYY-MM-DD>-<short-topic>/`, plus the coordination artifact `handoff-summary.md`. If a run folder exists, create a new unique dated/topic folder; never overwrite or add per-role report files.
+Focused Review uses chat-only for an unsaved bounded question or `focused-review.md` plus `handoff-summary.md` for a saved run. Include scope/stage, relevant strengths, merged findings with evidence and resolution types, priorities, limits, and author decisions. Assess readiness only for the reviewed scope.
+
+Balanced Panel Review writes the four report files below under `outputs/reviewer-panel/<YYYY-MM-DD>-<short-topic>/`, plus `handoff-summary.md`. If a run folder exists, create a new unique folder; never overwrite or add per-role report files.
 
 1. `01-editorial-assessment.md`: stage and revision status, completeness inventory, central message, 2-4 strengths, main risks, field/journal fit, and one Editor verdict: `Suitable for peer review`, `Potentially suitable after revision`, `Substantial concerns before submission`, or `High desk-rejection risk`.
 2. `02-consolidated-review-comments.md`: merged comments grouped by severity, each with all required fields, followed by reviewer consensus, single-role concerns, author-choice issues, and optional improvements.
 3. `03-priority-revision-plan.md`: no more than 5 ordered tasks, with resolution type, writing-only status, analysis/evidence needs, and recommended next Skill.
 4. `04-submission-readiness.md`: choose exactly one of `Ready for submission`, `Ready after focused revision`, `Major revision needed`, `Theoretical repositioning needed`, `Methodological revision needed`, `Additional evidence may be needed`, or `Not ready for submission`; explain the evidence, unresolved issues, and human decisions. For incomplete material, qualify the last label as a material-status judgment.
 
-The canonical detailed report is in the four report files; `handoff-summary.md` is the canonical downstream entry point. The chat response should be concise and cover: Manuscript stage, Overall assessment, Key strengths, Major concerns, Moderate and minor concerns, Reviewer consensus, Single-reviewer concerns, Author-choice issues, Priority revision roadmap, Submission readiness, and Human decisions required. Do not create any additional default report file.
+The mode-specific report is the detailed record; `handoff-summary.md` is the downstream entry point. In chat, give the reviewed scope, verdict, highest-priority findings, and author decisions without repeating every report heading. Do not create an additional default summary file.
 
 ## Handoff Map
 
 Recommend, but do not duplicate, the installed Skills: `evidence-synthesis` for literature coverage; `gap-contribution-auditor` for gap and contribution; `theory-hypothesis-builder` for theory, constructs, mechanisms, and hypotheses; `citation-claim-auditor` for citation support; `results-to-discussion` for result interpretation; and `manuscript-section-writer` for section drafting or restructuring. Route real editorial decisions, reviewer comments, response letters, and post-decision revision tracking to `$reviewer-response-and-revision`.
+
+Route cross-section consistency and propagation checks to `$manuscript-consistency-auditor`, and final language editing to `$academic-language-editor` after substantive revisions. Reuse current verified reports; do not require a fresh full specialist audit for an unchanged issue.

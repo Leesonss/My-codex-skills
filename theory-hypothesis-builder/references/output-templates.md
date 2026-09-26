@@ -6,7 +6,7 @@ Also create `handoff-summary.md` for every substantive saved run using `referenc
 
 ## Focused Mode
 
-Create normally:
+Use the shared chat-only or compact profile for a bounded task. For a saved focused run, normally create `01-focused-analysis.md` and `handoff-summary.md`; include the brief, mechanism, relevant evidence chain, hypothesis assessment when applicable, verdict, and author decisions as sections. If expanded output is requested, create:
 
 - `00-analysis-brief.md`: question, focal relationship, assumptions, mode, reused artifacts, RAG scope, and limitations.
 - `01-focused-analysis.md`: construct distinction, theory comparison, mechanism, rival explanation, and identification risk.

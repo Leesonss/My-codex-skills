@@ -121,7 +121,7 @@ Author acceptance or a planned change is not implementation. Implementation is n
 
 ## Outputs
 
-Create a unique run folder:
+For a saved run, create a unique folder; a bounded chat-only review creates no files:
 
 `outputs/manuscript-consistency-auditor/<YYYY-MM-DD>-<short-topic>/`
 
