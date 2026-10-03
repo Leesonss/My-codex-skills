@@ -1,10 +1,12 @@
 # Output Contract
 
-Create outputs only in the active project:
+Create manuscript outputs only in the active project:
 
 `outputs/academic-language-editor/<YYYY-MM-DD>-<short-topic>/`
 
 Never overwrite the source or a prior run. Record the exact canonical input path, version, reviewed scope, exclusions, and output format.
+
+Exception: reusable journal style profiles may be saved in the shared directory under `journal-style-adaptation.md`. Do not copy manuscripts or project-specific findings into that library. No extra JSON, CSV, database, or per-journal directory is required.
 
 For a bounded Conservative Copyedit or Section Language Edit, use compact packaging unless expanded reports are requested: the complete edited text/section and `handoff-summary.md`. Keep the brief, material change log, protected-content comparison, and unresolved Author Queries in labelled handoff sections, not in clean prose. A bounded Post-Edit Verification may similarly use one verification report plus handoff while preserving every required comparison. Full-manuscript polish and full-manuscript Post-Edit Verification retain the expanded files below. Profile selection never permits skipping semantic checks or relabelling an unverified manuscript as final.
 
@@ -12,7 +14,7 @@ For a bounded Conservative Copyedit or Section Language Edit, use compact packag
 
 For a short chat-only passage, return the complete edited passage, the gate, important protected-content notes, unresolved Author Queries, and a concise handoff without creating files unless requested.
 
-For a saved run, create:
+For an expanded saved run, create the files below. Compact saved runs use only the complete edited text and handoff as specified above:
 
 1. `00-edit-brief.md`
 2. `01-edited-text.md`
@@ -23,7 +25,7 @@ For a saved run, create:
 
 ## Section Language Edit
 
-Create:
+For expanded output, create the files below. Compact output retains their required records in the complete edited section and handoff:
 
 1. `00-edit-brief.md`
 2. `01-edited-section.md`
@@ -59,7 +61,7 @@ Do not rename an unverified review file as final.
 
 ## Post-Edit Verification
 
-Create:
+For full-manuscript or explicitly expanded verification, create the files below. Bounded compact verification uses the report and handoff described above:
 
 1. `00-edit-brief.md`
 2. `01-verification-matrix.md`
@@ -83,6 +85,8 @@ Preserve the original `.docx`. Verify that the clean document is complete, the r
 ## Required Records
 
 The edit brief must include mode, gate, canonical version, language, scope, exclusions, editing permissions, journal-rule basis, input inventory, output format, and final-status eligibility.
+
+When journal adaptation is relevant, record the target journal, article type, `journal_style_status` (`reused`, `sample-informed`, `provisional`, `general-only`, or `not requested`), profile path/version/date (or `not saved`), covered sections, key limitations, and any skipped requested adaptation. Put these in the existing brief/handoff or concise chat note, not a new report. Record `accepted_by`/`accepted_at` only after actual author acceptance. Language verification does not certify journal-style fit; insufficient samples must remain disclosed even when the language edit passes.
 
 The change log must use:
 

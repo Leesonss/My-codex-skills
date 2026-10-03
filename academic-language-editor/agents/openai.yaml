@@ -1,4 +1,10 @@
 interface:
   display_name: "Academic Language Editor"
   short_description: "Polish academic language without changing scientific meaning"
-  default_prompt: "Use $academic-language-editor to polish this stable manuscript while preserving all scientific content."
+  default_prompt: "Use $academic-language-editor to polish this stable manuscript, confirm its target journal if missing, and reuse an applicable journal style profile while preserving scientific meaning."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "literature_rag"
+      description: "Read-only style-sample retrieval when an applicable journal profile is unavailable; general language editing does not require retrieval"

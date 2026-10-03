@@ -1,6 +1,6 @@
 ---
 name: academic-language-editor
-description: Edit and verify content-stable academic manuscripts for grammar, syntax, concision, cohesion, academic register, tense, voice, terminology usage, captions, and local readability while preserving scientific meaning. Use for conservative copyediting, section-level language editing, full-manuscript submission polishing, delivery of a complete edited manuscript, or post-edit semantic-drift verification. Do not use for drafting or restructuring sections, changing argument or storyline, theory or hypothesis development, result interpretation, citation verification, scientific peer review, translation, reviewer-response coordination, or de-AI rewriting.
+description: Edit and verify stable academic manuscripts while preserving scientific meaning. Use for copyediting, section or full-manuscript language polish, complete edited-text delivery, and semantic-drift verification. Supports target-journal inquiry, post-retrieval screening of Literature RAG style samples, and reusable single-file journal profiles. Do not use for substantive restructuring, theory development, result interpretation, manuscript citation audits, scientific peer review, translation, or de-AI rewriting.
 ---
 
 # Academic Language Editor
@@ -11,7 +11,7 @@ Read [references/academic-workflow-contract.md](references/academic-workflow-con
 
 ## Operating Boundaries
 
-- Inspect only the active project and user-provided paths. Never overwrite the source manuscript or modify another Skill, source data, results, citations, or project configuration.
+- Inspect the active project, user-provided paths, and the shared journal-profile location defined in `references/journal-style-adaptation.md`. The shared profile is the only cross-project writing exception, under that reference's saving rules. Never overwrite the source manuscript or modify another Skill, source data, results, citations, or project configuration.
 - Edit language, not scientific content. Do not create or change theories, constructs, mechanisms, hypotheses, study design, measures, analyses, results, contributions, limitations, or reviewer commitments.
 - Preserve argument and paragraph function. Route substantive drafting, expansion, compression that removes scientific content, paragraph reorganization, and section restructuring to `$manuscript-section-writer`.
 - Apply only researcher-confirmed terminology. If labels conflict, flag the conflict and route canonical-term decisions to `$manuscript-consistency-auditor`; do not choose the version that sounds better.
@@ -24,7 +24,7 @@ Read [references/academic-workflow-contract.md](references/academic-workflow-con
 
 ## Select One Mode
 
-Record exactly one mode in `00-edit-brief.md`:
+Select exactly one mode. Record it in `00-edit-brief.md` for expanded saved runs, in the handoff for compact saved runs, or in the chat response for chat-only work:
 
 - `Conservative copyedit`: correct grammar, spelling, punctuation, usage, and unambiguous local syntax. Default for a short passage or uncertain content stability.
 - `Section language edit`: improve one complete section's language, local cohesion, repetition, and academic register without changing paragraph function.
@@ -43,6 +43,12 @@ Do not silently escalate a focused request into a full-manuscript pass.
    - `Yellow`: limited unresolved content remains. Apply only safe edits, preserve high-risk wording, and create Author Queries.
    - `Red`: the canonical version, theory, results, or core argument is materially unstable. Do not produce a final-looking full-manuscript polish; provide only bounded copyediting or a blocked edit brief.
 5. Build the Protected Content Register before editing. If the source of truth cannot be established, stop affected edits and request an author decision.
+
+## Target Journal And Reusable Style
+
+For manuscript editing, use the target journal already supplied or confirmed in applicable project records. If it is missing, ask once: "您这个稿件的目标期刊是？" Wait for the answer before journal adaptation. If the author has not decided, declines, or explicitly requests generic/no-questions editing, proceed with general academic language; do not insist on a journal. Do not ask again during Post-edit verification, for non-journal proposal prose, or when the answer is already recorded.
+
+Once a journal is known, read [references/journal-style-adaptation.md](references/journal-style-adaptation.md). First reuse an applicable single-file profile; only if missing, unsuitable, or explicitly refreshed, use read-only Literature RAG retrieval and post-retrieval screening. No new RAG filters or full-text tools are assumed. Style adaptation is an option within the existing editing modes, not another mandatory workflow or a promise of journal acceptance.
 
 ## Protected Content Register
 
@@ -75,7 +81,7 @@ Do not establish scientific truth from fluent prose. Preserve the authoritative 
 
 - Default to academic English. Support simplified Chinese academic editing only when explicitly requested and apply one language profile per run.
 - Do not translate. Preserve intentional technical English in simplified-Chinese text.
-- Use only user-supplied or explicitly verified journal language requirements. Otherwise label journal-specific preferences `requires external verification` and apply general academic-language standards.
+- Distinguish verified official requirements from observed sample tendencies and editorial suggestions. Use only user-supplied or explicitly verified official requirements; sample tendencies are not journal mandates. Follow the journal-style reference for evidence-limited adaptation and fallback to general academic language.
 - Preserve required disciplinary terms even when a plainer synonym appears more elegant.
 
 ## Outputs
